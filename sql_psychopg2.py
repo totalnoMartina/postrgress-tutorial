@@ -1,5 +1,6 @@
 import psycopg2
 
+
 # Connect to "chinook" database
 connection = psycopg2.connect(database="chinook")
 
@@ -26,10 +27,10 @@ cursor = connection.cursor()
 cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
 
 # Fetch the results (multiple)
-results = cursor.fetchall()
+# results = cursor.fetchall()
 
 # Fetch the result (single)
-# results = cursor.fetchone()
+results = cursor.fetchone()
 
 # Close the connection
 connection.close()
